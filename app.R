@@ -10,82 +10,82 @@ ui <-
   fluidPage(
     
     dashboardPage(skin = "green",
-      
-      dashboardHeader(title = "Shiny App team 16", titleWidth = 300),
-      
-      dashboardSidebar( 
-        
-        sidebarMenu(
-          menuItem("Gráficos de barras", tabName = "Dashboard", icon = icon("futbol")),
-          menuItem("Goles casa - visitante", tabName = "goles", icon = icon("chart-column")),
-          menuItem("Data Table", tabName = "data_table", icon = icon("table")),
-          menuItem("Factores de ganancia", tabName = "momios", icon = icon("chart-line"))
-        ),
-        width = 300
-        
-      ),
-      
-      dashboardBody(
-        
-        tabItems(
-          
-          # Histograma
-          tabItem(tabName = "Dashboard",
-                  fluidRow(
-                    
-                    titlePanel("Goles a favor y en contra por equipo"), 
-                    selectInput("x", "Seleccione el valor de X",
-                                choices = c("home.score", "away.score")),
-                    
-                    
-                    plotOutput("plot1", height = 550, width = 1200)
-                    
-                    
-                  )
-          ),
-          
-          # imágenes
-          tabItem(tabName = "goles", 
-                  fluidRow(
-                    titlePanel(h3("Probabilidad de goles en casa y visitante")),
-                    
-                    img(src = "casa.png", 
-                        height = 550, width = 750) ,
-                    img(src = "visitante.png",
-                        height = 550, width = 750),
-                    img(src = "calor.png",
-                        height = 550, width = 750)
-                    
-                  )
-          ),
-          
-          
-          
-          tabItem(tabName = "data_table",
-                  fluidRow(        
-                    titlePanel(h3("Data Table")),
-                    dataTableOutput ("data_table")
-                  )
-          ), 
-          
-          tabItem(tabName = "momios",
-                  fluidRow(
-                    titlePanel(h3("Imágen de calor para la correlación de las variables")),
-                    h3("Factor de ganancia Máximo"),
-                    img( src = "max.png", 
-                         height = 550, width = 750),
-                    h3("Factor de ganancia Promedio"),
-                    img( src = "prom.png", 
-                         height = 550, width = 750)
-                    
-                    
-                    
-                  )
                   
-          )
-          
-        )
-      )
+                  dashboardHeader(title = "Shiny App team 16", titleWidth = 300),
+                  
+                  dashboardSidebar( 
+                    
+                    sidebarMenu(
+                      menuItem("Desglose de goles por equipo", tabName = "Dashboard", icon = icon("futbol")),
+                      menuItem("Probabilidad de goles casa - visitante", tabName = "goles", icon = icon("chart-column")),
+                      menuItem("Tabla de datos", tabName = "data_table", icon = icon("table")),
+                      menuItem("Factores de ganancia", tabName = "momios", icon = icon("chart-line"))
+                    ),
+                    width = 300
+                    
+                  ),
+                  
+                  dashboardBody(
+                    
+                    tabItems(
+                      
+                      # Histograma
+                      tabItem(tabName = "Dashboard",
+                              fluidRow(
+                                
+                                titlePanel("Goles a favor y en contra por equipo"), 
+                                selectInput("x", "Seleccione el valor de X",
+                                            choices = c("home.score", "away.score")),
+                                
+                                
+                                plotOutput("plot1", height = 550, width = 1200)
+                                
+                                
+                              )
+                      ),
+                      
+                      # imágenes
+                      tabItem(tabName = "goles", 
+                              fluidRow(
+                                titlePanel(h3("Probabilidad de goles en casa y visitante")),
+                                
+                                img(src = "casa.png", 
+                                    height = 550, width = 750) ,
+                                img(src = "visitante.png",
+                                    height = 550, width = 750),
+                                img(src = "calor.png",
+                                    height = 550, width = 750)
+                                
+                              )
+                      ),
+                      
+                      
+                      
+                      tabItem(tabName = "data_table",
+                              fluidRow(        
+                                titlePanel(h3("Tabla con todos los datos")),
+                                dataTableOutput ("data_table")
+                              )
+                      ), 
+                      
+                      tabItem(tabName = "momios",
+                              fluidRow(
+                                #titlePanel(h3("Imágen de calor para la correlación de las variables")),
+                                h3("Factor de ganancia Máximo"),
+                                img( src = "max.png", 
+                                     height = 550, width = 750),
+                                h3("Factor de ganancia Promedio"),
+                                img( src = "prom.png", 
+                                     height = 550, width = 750)
+                                
+                                
+                                
+                              )
+                              
+                      )
+                      
+                    )
+                  )
     )
   )
 
