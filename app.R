@@ -16,7 +16,7 @@ ui <-
                   dashboardSidebar( 
                     
                     sidebarMenu(
-                      menuItem("Primera", tabName = "Primera", icon = icon("r")),
+                      menuItem("Introducción", tabName = "Primera", icon = icon("r")),
                       menuItem("Desglose de goles por equipo", tabName = "Dashboard", icon = icon("futbol")),
                       menuItem("Probabilidad de goles casa - visitante", tabName = "goles", icon = icon("chart-column")),
                       menuItem("Tabla de datos", tabName = "data_table", icon = icon("table")),
@@ -132,7 +132,7 @@ server <- function(input, output) {
   #Gráfico de barras
   output$plot1 <- renderPlot({
     
-    data <-  read.csv("match.data.csv", header = T)
+    data <-  read.csv("https://raw.githubusercontent.com/beduExpert/Programacion-R-Santander-2021/main/Sesion-08/Postwork/match.data.csv", header = T)
     
     data <- mutate(data, FTR = ifelse(home.score > away.score, "H", ifelse(home.score < away.score, "A", "D")))
     
@@ -160,11 +160,15 @@ server <- function(input, output) {
       facet_grid(input$z)  #selección del grid
     
   })   
-  
+
   #Data Table
-  output$data_table <- renderDataTable( {data}, 
-                                        options = list(aLengthMenu = c(10,25,50),
-                                                       iDisplayLength = 10)
+  output$data_table <- renderDataTable( {
+    data <-  read.csv("https://raw.githubusercontent.com/beduExpert/Programacion-R-Santander-2021/main/Sesion-08/Postwork/match.data.csv", header = T)
+    
+    data <- mutate(data, FTR = ifelse(home.score > away.score, "H", ifelse(home.score < away.score, "A", "D")))
+  },
+                                        options = list(lengthMenu = c(10,25,50),
+                                                       pageLength = 10)
   )
   
 }
