@@ -117,7 +117,9 @@ ui <-
                                 tags$a(href="https://github.com/BaltaV", "Baltasar Vez"), br(),
                                 tags$a(href="https://github.com/f-val15", "Francisco Valerio"), br(),
                                 tags$a(href="https://github.com/axiom-of-choice", "Isaac Hernández"), br(),
-                                tags$a(href="https://github.com/gutierrezrd90", "Daniel Gutiérrez")
+                                tags$a(href="https://github.com/gutierrezrd90", "Daniel Gutiérrez"), br(),
+                                br(),
+                                tags$a(href="https://github.com/axiom-of-choice/dashboard-shiny", "Source Code (GitHub)")
                               )
                       )
                       
