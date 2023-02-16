@@ -1,4 +1,4 @@
-# dashboard-shiny
+# Dashboard in R Shiny
 
 This repository contains the final project for R course of the BEDU - Santander Data Science Specialization \
 Link to the project:
