@@ -6,4 +6,9 @@ Link to the project:
 Requirements:
 (https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-08/Postwork)
 
-
+Team members:
+-   Isaac Hernández García
+-   Diego Sebastián Zacarías De La Rosa
+-   Daniel Gutiérrez Ruiz
+-   Francisco Valentín Valerio López
+-   Baltasar Vez De La Garza
