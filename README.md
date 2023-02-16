@@ -1,6 +1,6 @@
 # dashboard-shiny
 
-This repository contains the final project for the BEDU - Santander Data Science Specialization \
+This repository contains the final project for R course of the BEDU - Santander Data Science Specialization \
 Link to the project:
 (https://isaac-hernandez-g.shinyapps.io/dashboard-shiny/) \
 Requirements:
